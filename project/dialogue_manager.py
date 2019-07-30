@@ -58,7 +58,8 @@ class DialogueManager(object):
         self.chitchat_bot = ChatBot('Nim Obvious', trainer='chatterbot.trainers.ChatterBotCorpusTrainer')
 
         # Train based on the english corpus
-        self.chitchat_bot.train("chatterbot.corpus.english")
+        #self.chitchat_bot.train("chatterbot.corpus.english")
+        self.chitchat_bot.train("chatterbot.corpus.english.conversations")
 
 
     def generate_answer(self, question):
@@ -88,8 +89,6 @@ class DialogueManager(object):
             # Pass prepared_question to thread_ranker to get predictions.
             #thread_id = #### YOUR CODE HERE ####
             tag = self.tag_classifier.predict(features)[0]
-            # Pass prepared_question to thread_ranker to get predictions.
-            # thread_id = #### YOUR CODE HERE ####
             thread_id = self.thread_ranker.get_best_thread(question, tag)[0]
             return self.ANSWER_TEMPLATE % (tag, thread_id)
 
