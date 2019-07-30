@@ -62,7 +62,7 @@ class DialogueManager(object):
         self.chitchat_bot.train("chatterbot.corpus.english")
 
 
-def generate_answer(self, question):
+    def generate_answer(self, question):
         """Combines stackoverflow and chitchat parts using intent recognition."""
 
         # Recognize intent of the question using `intent_recognizer`.
