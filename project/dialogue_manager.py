@@ -55,7 +55,7 @@ class DialogueManager(object):
         ########################
         #### YOUR CODE HERE ####
         ########################
-        self.chitchat_bot = ChatBot('Nim Obvious', trainer='chatterbot.trainers.ChatterBotCorpusTrainer')
+        self.chitchat_bot = ChatBot('Gorkij', trainer='chatterbot.trainers.ChatterBotCorpusTrainer')
 
         # Train based on the english corpus
         #self.chitchat_bot.train("chatterbot.corpus.english")
