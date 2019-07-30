@@ -8,11 +8,11 @@ from nltk.corpus import stopwords
 
 # Paths for all resources for the bot.
 RESOURCE_PATH = {
-    'INTENT_RECOGNIZER': 'intent_recognizer.pkl',
-    'TAG_CLASSIFIER': 'tag_classifier.pkl',
-    'TFIDF_VECTORIZER': 'tfidf_vectorizer.pkl',
-    'THREAD_EMBEDDINGS_FOLDER': 'thread_embeddings_by_tags',
-    'WORD_EMBEDDINGS': 'word_embeddings.tsv',
+    'INTENT_RECOGNIZER': '/opt/bot/data/intent_recognizer.pkl',
+    'TAG_CLASSIFIER': '/opt/bot/data/tag_classifier.pkl',
+    'TFIDF_VECTORIZER': '/opt/bot/data/tfidf_vectorizer.pkl',
+    'THREAD_EMBEDDINGS_FOLDER': '/opt/bot/data/thread_embeddings_by_tags',
+    'WORD_EMBEDDINGS': '/opt/bot/data/stackoverflow_duplicate.tsv',
 }
 
 
