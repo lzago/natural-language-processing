@@ -5,6 +5,7 @@ import time
 import argparse
 import os
 import json
+import dialogue_manager
 
 from requests.compat import urljoin
 
