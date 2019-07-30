@@ -22,11 +22,9 @@ class ThreadRanker(object):
         thread_ids, thread_embeddings = self.__load_embeddings_by_tag(tag_name)
 
         # HINT: you have already implemented a similar routine in the 3rd assignment.
-        
-        #question_vec = np.array(question_to_vec(question, self.word_embeddings, self.embeddings_dim)).reshape(-1, 100) #### YOUR CODE HERE ####
-        #best_thread = pairwise_distances_argmin(question_vec, thread_embeddings, batch_size=10)[0] #### YOUR CODE HERE ####
+
         question_vec = question_to_vec(question, self.word_embeddings, self.embeddings_dim).reshape(1, -1)
-        best_thread = pairwise_distances_argmin(question_vec, thread_embeddings)
+        best_thread = pairwise_distances_argmin(question_vec, thread_embeddings,metric='cosine')
         
         return thread_ids[best_thread]
 
